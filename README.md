@@ -2,9 +2,9 @@
 
 ## CampusView TV
 
-CampusView TV is a tvOS application concept developed for the SE4041 Mobile Application Design and Development module.
+CampusView TV is a SwiftUI-based tvOS application prototype developed for the SE4041 Mobile Application Design and Development module.
 
-The application is designed to display university announcements, upcoming events, campus information and important student updates on a large-screen television interface.
+The application is designed to present university announcements, upcoming events and campus facility information through a large-screen, focus-based Apple TV interface.
 
 ---
 
@@ -24,107 +24,114 @@ The application is designed to display university announcements, upcoming events
 
 ## Problem
 
-University announcements, event information and campus updates are often distributed across multiple communication channels.
+University announcements, event information and campus updates are often distributed through multiple communication channels.
 
-Students and visitors may miss important information or have difficulty accessing relevant campus updates quickly.
-
----
-
-## Proposed Solution
-
-CampusView TV provides a large-screen information experience designed specifically for Apple TV.
-
-The application will present important university information using a clear, remote-friendly and focus-based tvOS interface.
+Students, staff and visitors may therefore miss important information or have difficulty finding relevant updates quickly.
 
 ---
 
-## Target Users
+## Solution
 
-- University students
-- Campus visitors
-- Academic staff
-- Administrative staff
+CampusView TV provides a centralized large-screen campus information experience designed specifically for Apple TV.
+
+The application presents important university information using remote-friendly navigation, large typography, focusable cards and clear content sections.
 
 ---
 
-## Planned Features
+## Main Features
 
-- Featured campus announcements
+- Featured campus announcement
+- Campus announcements
 - Upcoming university events
 - Campus facility information
-- Announcement detail screen
-- Event detail screen
+- Reusable detail screens
 - Focus-based tvOS navigation
-- Horizontal content sections
-- Large-screen optimized layouts
-- Remote-friendly interaction
-- SwiftUI animations and transitions
-
----
-
-## Planned Screens
-
-### 1. Home
-
-The Home screen will display:
-
-- Featured announcement
-- Latest campus updates
-- Upcoming events
-- Quick access to campus information
-
-### 2. Announcements
-
-Displays available university announcements in a tvOS-focused card layout.
-
-### 3. Events
-
-Displays upcoming campus events with relevant event information.
-
-### 4. Details
-
-Displays expanded information for a selected announcement or event.
-
----
-
-## tvOS-Specific Design
-
-The project is designed around tvOS interaction principles including:
-
-- Focus-based navigation
-- Apple TV remote interaction
-- Large readable typography
-- Large focusable cards
-- Clear visual hierarchy
+- Apple TV remote-friendly interaction
 - Horizontal content browsing
 - Focus animations
-- Comfortable viewing distance
+- Large-screen optimized UI
+- Accessibility labels
+- Reusable SwiftUI components
 
 ---
 
-## Planned Technologies
+## Application Screens
+
+### Home
+
+Provides:
+
+- Featured content
+- Announcements navigation
+- Events navigation
+- Facilities navigation
+- Upcoming event cards
+- Campus facility cards
+
+### Announcements
+
+Displays university announcements using horizontally browsable focus cards.
+
+### Events
+
+Displays upcoming university events with dates, locations and detail navigation.
+
+### Facilities
+
+Displays important campus facilities and student services.
+
+### Detail View
+
+Provides complete information for announcements, events and facilities.
+
+---
+
+## tvOS-Specific Features
+
+CampusView TV is designed around Apple TV interaction patterns including:
+
+- Focus-based navigation
+- Large focus targets
+- Remote-friendly controls
+- Horizontal browsing
+- Focus-responsive card animations
+- Clear large-screen typography
+- Strong visual hierarchy
+
+Focused cards use visual feedback including:
+
+- Scale changes
+- Accent borders
+- Elevated backgrounds
+- Shadows
+
+---
+
+## Technologies
 
 - Swift
 - SwiftUI
 - NavigationStack
 - tvOS Focus System
-- SwiftUI animations
-- Reusable components
-- Local sample data
+- ScrollView
+- LazyHStack
+- SF Symbols
+- XCTest
+- XCUITest
 
 ---
 
-## Planned Project Structure
+## Architecture
 
 ```text
-SE4041-Assignment02-tvOS/
-│
-├── App/
-├── Models/
-├── Data/
-├── Components/
-├── Views/
-├── Theme/
-├── Tests/
-├── docs/
-└── README.md
+SampleContent
+      ↓
+CampusContent
+      ↓
+SwiftUI Views
+      ↓
+NavigationLink
+      ↓
+FocusCard
+      ↓
+DetailView
